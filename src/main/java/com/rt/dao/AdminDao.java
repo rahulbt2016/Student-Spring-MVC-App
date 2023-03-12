@@ -1,4 +1,4 @@
-package crud.dao;
+package com.rt.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +11,13 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import crud.model.Admin;
+import com.rt.model.Admin;
+
+/**
+ * 
+ * @author rahul
+ *This is a DAO class for accessing admin table of database
+ */
 
 @Component
 public class AdminDao {

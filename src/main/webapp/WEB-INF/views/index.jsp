@@ -16,6 +16,9 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
 	integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
 	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+		
+	</style>
 </head>
 <body>
   <%-- Get the value of the "id" parameter --%>
@@ -24,16 +27,31 @@
     %>
     
 	<div class="container">
-	<h1>Hello <%= loggedinuser %></h1>
-		<h3>Student Data</h3>
-		<table class="table">
-			<thead>
+	<div class="container">
+		<div class="row mt-2">
+			<h1 class="col-sm">Hello <%= loggedinuser %></h1>
+			<a href="${pageContext.request.contextPath }/" class="col-sm text-danger" style="text-align:right">
+				<i class="fas fa-sign-out" style="font-size: 25px"></i>
+			</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row mt-2">
+			<h3 class="col-sm"> Student Details</h3>
+			<div class="col-sm" style="text-align:right">
+				<a href="add-student" class="btn btn-primary">Add Student</a>
+			</div>
+		</div>
+	</div>
+		<table class="table table-striped table-bordered table-hover table-active">
+			<thead class="thead-dark">
 				<tr>
 					<th>Student Id</th>
 					<th>First Name</th>
 					<th>Last Name</th>
 					<th>Course</th>
-					<th>Action</th>
+					<th>Edit</th>
+					<th>Delete</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -44,21 +62,20 @@
 						<td>${student.lastName}</td>
 						<td>${student.course}</td>
 						<td>
-								<a href="delete-student/${student.studentId}" class="btn btn-danger">
-									<i class="fas fa-trash"></i>
+								<a href="update-student/${student.studentId}">
+									<i class="fas fa-edit" style="font-size: 25px"></i>
 								</a>
-								<a href="update-student/${student.studentId}" class="btn btn-success">
-									<i class="fas fa-pen-nib"></i>
+						</td>
+						<td>
+								
+								<a href="delete-student/${student.studentId}" class="text-danger">
+									<i class="fas fa-trash" style="font-size: 25px"></i>
 								</a>
 						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
-		<div class="container text-center">
-			<a href="add-student" class="btn btn-outline-success">Add Student</a>
-			<a href="${pageContext.request.contextPath }/" class="btn btn-outline-danger">Logout</a>
-		</div>
 	</div>
 	<!-- Bootstrap JavaScript -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

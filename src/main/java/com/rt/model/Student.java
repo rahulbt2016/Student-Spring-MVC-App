@@ -1,10 +1,14 @@
-package crud.model;
+package com.rt.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+/**
+ * 
+ * @author rahul
+ *Model class for Student entity
+ */
 @Entity
 public class Student {
 

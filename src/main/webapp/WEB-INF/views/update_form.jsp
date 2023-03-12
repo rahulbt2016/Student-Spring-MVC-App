@@ -13,11 +13,7 @@
 	crossorigin="anonymous">
 <style>
 	body {
-		background-image:
-			url('https://assets-global.website-files.com/5e39e095596498a8b9624af1/5f6e93d250a6d04f4eae9f02_Backgrounds-WFU-thumbnail-(size).jpg');
-		background-size: cover;
-		background-position: center center;
-		height: 100vh;
+		background-color: lavender;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -25,27 +21,26 @@
 </style>
 </head>
 <body>
-	<div class="container">
-		<h1 class="text-center mb-5 text-white">Update student details</h1>
+	<div class="container mt-5">
+		<h1 class="text-center mb-5">Edit Student</h1>
 		<form action="${pageContext.request.contextPath }/handle-student" method="post">
 			<input type="hidden" value = "${student.studentId }" name="studentId"></input>
 			<div class="form-group">
-				<label for="firstName" class="text-white">First Name</label> <input
+				<label for="firstName">First Name</label> <input
 					type="text" class="form-control" id="firstName" name = "firstName"
 					placeholder="Enter first name" value="${student.firstName }">
 			</div>
 			<div class="form-group">
-				<label for="lastName" class="text-white">Last Name</label> <input
+				<label for="lastName">Last Name</label> <input
 					type="text" class="form-control" id="lastName" name="lastName"
 					placeholder="Enter last name" value="${student.lastName }">
 			</div>
 			<div class="form-group">
-				<label for="course" class="text-white">Course</label> <input
+				<label for="course">Course</label> <input
 					type="text" class="form-control" id="course" name="course"
 					placeholder="Enter course name"  value="${student.course }">
 			</div>
 			<button type="submit" class="btn btn-primary">Update</button>
-			<a href="${pageContext.request.contextPath }/" class="btn btn-danger">Back</a>
 			
 		</form>
 	</div>

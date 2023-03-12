@@ -1,4 +1,4 @@
-package crud.dao;
+package com.rt.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,8 +11,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
-import crud.model.Student;
-
+import com.rt.model.Student;
+/**
+ * 
+ * @author rahul
+ *This is a DAO class for accessing student table of database
+ */
 @Component
 public class StudentDao {
 

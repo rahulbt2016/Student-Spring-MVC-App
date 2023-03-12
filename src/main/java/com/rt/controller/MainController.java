@@ -1,5 +1,9 @@
-package crud.controller;
-
+package com.rt.controller;
+/**
+ * @author rahul
+ * This is the Main Controller that maps all the incoming
+ * requests and calls appropriate method
+ */
 import java.util.Iterator;
 import java.util.List;
 
@@ -14,10 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.RedirectView;
 
-import crud.dao.AdminDao;
-import crud.dao.StudentDao;
-import crud.model.Admin;
-import crud.model.Student;
+import com.rt.dao.AdminDao;
+import com.rt.dao.StudentDao;
+import com.rt.model.Admin;
+import com.rt.model.Student;
 
 @Controller
 public class MainController {
